@@ -1,0 +1,101 @@
+/* ===== History.css ===== */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---- Section ---- */
+.history-section {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.history-section h2 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Loading and messages ---- */
+.message {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* ---- Table container ---- */
+.history-table-container {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: white;
+  padding: 1rem;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Table ---- */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.history-table th {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.history-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.history-table tr:hover {
+  background: #f1f5f9;
+  transition: background 0.2s ease-in-out;
+}
+
+/* ---- Alternating rows ---- */
+.history-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* ---- AQI category coloring ---- */
+.history-table td[style] {
+  font-weight: 600;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .history-section {
+    padding: 1rem;
+  }
+
+  .history-table-container {
+    padding: 0.5rem;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+}

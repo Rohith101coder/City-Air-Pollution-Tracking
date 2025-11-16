@@ -1,0 +1,369 @@
+/* ===== Dashboard.css - Dark Theme ===== */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0f0f0f);
+  font-family: "Poppins", sans-serif;
+  color: #e5e7eb;
+}
+
+/* Main section */
+.dashboard {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(10, 10, 10, 0.5));
+}
+
+.dashboard h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Status message ---- */
+.message {
+  color: #a0aec0;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* ---- AQI cards ---- */
+.aqi-card {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 2rem 2.5rem;
+  border: 2px solid;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.9));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.aqi-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.aqi-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.aqi-card p {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin: 0.6rem 0;
+  line-height: 1.6;
+}
+
+.aqi-card p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ---- Manual Search ---- */
+.manual-search {
+  margin-top: 2.5rem;
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.95));
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manual-search:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.manual-search h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.manual-search form {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.manual-search input {
+  flex: 1;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.manual-search input::placeholder {
+  color: #6b7280;
+}
+
+.manual-search input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2), 0 0 20px rgba(59, 130, 246, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.manual-search button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.manual-search button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.manual-search button:active {
+  transform: translateY(0);
+}
+
+/* ---- AQI Reference Table ---- */
+.aqi-table-container {
+  margin: 2.5rem auto;
+  max-width: 850px;
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.95));
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.aqi-table-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.aqi-table-container h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.aqi-reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.aqi-reference-table thead {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.aqi-reference-table th {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.aqi-reference-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.aqi-reference-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.aqi-reference-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.aqi-reference-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.01);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.aqi-reference-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.aqi-reference-table td {
+  padding: 1.2rem 1rem;
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+.aqi-reference-table td:first-child {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.aqi-reference-table td:nth-child(2) {
+  color: #d1d5db;
+  font-weight: 500;
+}
+
+.aqi-reference-table td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.color-name {
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Map container ---- */
+.map-container {
+  margin-top: 2.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.map-container:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ---- Loading ---- */
+.dashboard p {
+  font-size: 1rem;
+  color: #a0aec0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard h2 {
+    font-size: 1.5rem;
+  }
+
+  .aqi-card {
+    width: 95%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .aqi-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .aqi-card p {
+    font-size: 0.95rem;
+  }
+
+  .manual-search {
+    width: 95%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .manual-search h3 {
+    font-size: 1.1rem;
+  }
+
+  .map-container {
+    height: 350px;
+    margin-top: 2rem;
+  }
+
+  .aqi-table-container {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    width: 95%;
+  }
+
+  .aqi-table-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .aqi-reference-table {
+    font-size: 0.85rem;
+  }
+
+  .aqi-reference-table th,
+  .aqi-reference-table td {
+    padding: 0.8rem 0.6rem;
+  }
+
+  .aqi-reference-table th {
+    font-size: 0.9rem;
+  }
+
+  .color-dot {
+    width: 18px;
+    height: 18px;
+  }
+}
